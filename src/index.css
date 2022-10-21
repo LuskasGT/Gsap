@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  font-family:"Arial";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(41, 41, 41);
+  height: 100%;
+
+
+  font-weight: 300;
+	margin: 0;
+	padding: 0 20px;
+}
+
+#t {
+  opacity: 0.0;
+  margin-right: 15px;
+  margin-top: 25%;
+
+}
+
+p {
+  color: rgb(255, 0, 0);
+  font-size: 40px
+}
+
+code {
+  font-family:"Arial";
+}
+
+img{
+  border-radius: 3px;
+	box-shadow: 0 5px 35px -2px rgb(0 0 0 / 10%);
+	transform: scale(0);
+  height: 150px;
+  width: 150px;
+}
+
