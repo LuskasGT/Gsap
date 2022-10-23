@@ -64,7 +64,7 @@ body {
 	grid-template-columns: repeat(5, 1fr);
 }
 
-.box {
+.box  {
 	border-radius: 3px;
 	background: #6fb936;
 	box-shadow: 0 5px 35px -2px rgb(0 0 0 / 10%);

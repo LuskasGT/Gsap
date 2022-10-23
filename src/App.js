@@ -16,7 +16,29 @@ function App() {
   const parent = useRef();
   const q = gsap.utils.selector(parent)
 
+
+
   useEffect(() => {
+    gsap.to(".box", 1, {
+      scale: 0.1, 
+      y: 60,
+      yoyo: true, 
+      repeat: -1, 
+      ease: "power1.inOut",
+      delay: 1,
+      stagger: {
+        amount: 1.5, 
+        grid: "auto",
+        from: "center"
+      }
+    })
+  }, [])
+  
+
+
+
+  useEffect(() => {
+    setTimeout (() =>{
     const parentBoxes = gsap.utils.toArray(".parent-container > *");
     const childBoxes = gsap.utils.toArray(".child-container > *");
     const childContainer = document.querySelector(".child-container");
@@ -41,7 +63,7 @@ function App() {
     tl
       .to(parentBoxes, {
         keyframes: [
-          { scale: 3.5, rotation: 85},
+          { scale: 3.5, rotation: 75},
           { scale: 1, rotation: 0 }
         ]
       })
@@ -56,42 +78,48 @@ function App() {
       }, "+=2")
       .to(parentBoxesTwo, {
         keyframes: [
-          { scale: 3.5, rotation: 85 },
+          { scale: 3.5, rotation: 75 },
           { scale: 1, rotation: 0 }
         ]
       }, 1.5)
-
+    },8000.0)
   }, [])
 
   useEffect(() => {
     setTimeout (() =>{
 
     tl2.current = gsap.timeline()
-        .to(q('#resto'),{opacity:"0.0",duration:1.0});
-        gsap.to("#i0", {rotation: 27, x: 100, duration: 1.2});
-        gsap.to("#i1", {rotation: 27, x: 100, duration: 1.2});
-        gsap.to("#i2", {rotation: 27, x: 100, duration: 1.2});
-        gsap.to("#i3", {rotation: 27, x: 100, duration: 1.2});
-        gsap.to("#i4", {rotation: 27, x: 100, duration: 1.2});
-        gsap.to("#i5", {rotation: 27, x: 100, duration: 1.2});
-        gsap.to("#i6", {rotation: 27, x: 100, duration: 1.2});
-        gsap.to("#i7", {rotation: 27, x: 100, duration: 1.2});
-        gsap.to("#i8", {rotation: 27, x: 100, duration: 1.2});
+        gsap.to(q('#resto'),{rotation: 27, x: 100, duration: 1.5});
+        gsap.to("#i0", {rotation: 27, x: 100, duration: 1.5});
+        gsap.to("#i1", {rotation: 27, x: 100, duration: 1.5});
+        gsap.to("#i2", {rotation: 27, x: 100, duration: 1.5});
+        gsap.to("#i3", {rotation: 27, x: 100, duration: 1.5});
+        gsap.to("#i4", {rotation: 27, x: 100, duration: 1.5});
+        gsap.to("#i5", {rotation: 27, x: 100, duration: 1.5});
+        gsap.to("#i6", {rotation: 27, x: 100, duration: 1.5});
+        gsap.to("#i7", {rotation: 27, x: 100, duration: 1.5});
+        gsap.to("#i8", {rotation: 27, x: 100, duration: 1.5});
       },8000.0)
 
       setTimeout (() =>{
         tl2.current = gsap.timeline()
-            .to(q('#resto'),{opacity:"0.0",duration:1.0});
-            gsap.to("#i0", {rotation: 0, x: 100, duration: 1.2});
-            gsap.to("#i1", {rotation: 0, x: 100, duration: 1.2});
-            gsap.to("#i2", {rotation: 0, x: 100, duration: 1.2});
-            gsap.to("#i3", {rotation: 0, x: 100, duration: 1.2});
-            gsap.to("#i4", {rotation: 0, x: 100, duration: 1.2});
-            gsap.to("#i5", {rotation: 0, x: 100, duration: 1.2});
-            gsap.to("#i6", {rotation: 0, x: 100, duration: 1.2});
-            gsap.to("#i7", {rotation: 0, x: 100, duration: 1.2});
-            gsap.to("#i8", {rotation: 0, x: 100, duration: 1.2});
+            gsap.to(q('#resto'),{rotation: 0, x: 100, duration: 1.0});
+            gsap.to("#i0", {rotation: 0, x: 100, duration: 1.5});
+            gsap.to("#i1", {rotation: 0, x: 100, duration: 1.5});
+            gsap.to("#i2", {rotation: 0, x: 100, duration: 1.5});
+            gsap.to("#i3", {rotation: 0, x: 100, duration: 1.5});
+            gsap.to("#i4", {rotation: 0, x: 100, duration: 1.5});
+            gsap.to("#i5", {rotation: 0, x: 100, duration: 1.5});
+            gsap.to("#i6", {rotation: 0, x: 100, duration: 1.5});
+            gsap.to("#i7", {rotation: 0, x: 100, duration: 1.5});
+            gsap.to("#i8", {rotation: 0, x: 100, duration: 1.5});
           },11500.0)     
+
+
+      setTimeout (()=>{   
+      tl2.current = gsap.timeline()
+      gsap.to(q('#resto'),{opacity:"0.0",duration:1.0});
+    },14500.0) 
     },[])
 
   useEffect(() => {
@@ -119,7 +147,7 @@ function App() {
           .to(q('#i7'), getRandomPosition())
           .to(q('#i8'), getRandomPosition())
         }, 1500)
-      },13000)
+      },13500)
     },[])
 
 
