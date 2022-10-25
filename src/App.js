@@ -19,11 +19,14 @@ function App() {
 
 
   useEffect(() => {
-    gsap.to(".box", 1, {
-      scale: 0.1, 
+    gsap.to("#resto", 1.5, {
+      rotation: 360, 
+      duration: 4, 
+      ease: "none",
+      scale: 2.0, 
       y: 60,
       yoyo: true, 
-      repeat: -1, 
+      repeat: 1, 
       ease: "power1.inOut",
       delay: 1,
       stagger: {
@@ -34,8 +37,6 @@ function App() {
     })
   }, [])
   
-
-
 
   useEffect(() => {
     setTimeout (() =>{
@@ -82,7 +83,7 @@ function App() {
           { scale: 1, rotation: 0 }
         ]
       }, 1.5)
-    },8000.0)
+    },6500.0)
   }, [])
 
   useEffect(() => {
@@ -99,7 +100,7 @@ function App() {
         gsap.to("#i6", {rotation: 27, x: 100, duration: 1.5});
         gsap.to("#i7", {rotation: 27, x: 100, duration: 1.5});
         gsap.to("#i8", {rotation: 27, x: 100, duration: 1.5});
-      },8000.0)
+      },6500.0)
 
       setTimeout (() =>{
         tl2.current = gsap.timeline()
@@ -113,13 +114,13 @@ function App() {
             gsap.to("#i6", {rotation: 0, x: 100, duration: 1.5});
             gsap.to("#i7", {rotation: 0, x: 100, duration: 1.5});
             gsap.to("#i8", {rotation: 0, x: 100, duration: 1.5});
-          },11500.0)     
+          },9500.0)     
 
 
       setTimeout (()=>{   
       tl2.current = gsap.timeline()
       gsap.to(q('#resto'),{opacity:"0.0",duration:1.0});
-    },14500.0) 
+    },12500.0) 
     },[])
 
   useEffect(() => {
@@ -138,7 +139,7 @@ function App() {
           console.log(window.outerWidth)
           tl.current = gsap.timeline()
           .to(q('#i0'), getRandomPosition())
-          .to(q('#i1'), getRandomPosition())
+        .to(q('#i1'), getRandomPosition())
           .to(q('#i2'), getRandomPosition())
           .to(q('#i3'), getRandomPosition())
           .to(q('#i4'), getRandomPosition())
