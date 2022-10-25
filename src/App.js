@@ -114,13 +114,13 @@ function App() {
             gsap.to("#i6", {rotation: 0, x: 100, duration: 1.5});
             gsap.to("#i7", {rotation: 0, x: 100, duration: 1.5});
             gsap.to("#i8", {rotation: 0, x: 100, duration: 1.5});
-          },9500.0)     
+          },1100.0)     
 
 
       setTimeout (()=>{   
       tl2.current = gsap.timeline()
       gsap.to(q('#resto'),{opacity:"0.0",duration:1.0});
-    },12500.0) 
+    },14500.0) 
     },[])
 
   useEffect(() => {
@@ -148,7 +148,7 @@ function App() {
           .to(q('#i7'), getRandomPosition())
           .to(q('#i8'), getRandomPosition())
         }, 1500)
-      },13500)
+      },16500)
     },[])
 
 
